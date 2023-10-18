@@ -6,15 +6,15 @@
 </head>
 <body>
     <h1>Update Entity</h1>
-    <form action="/update/{{ index }}" method="POST">
+    <form action="/update/{{ entity[0] }}" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ entity.name }}" required><br>
+        <input type="text" id="name" name="name" value="{{ entity[1] }}" required><br>
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" value="{{ entity.age }}" required><br>
+        <input type="number" id="age" name="age" value="{{ entity[2] }}" required><br>
         <label for="weight">Weight:</label>
-        <input type="number" id="weight" name="weight" value="{{ entity.weight }}" required><br>
+        <input type="number" id="weight" name="weight" value="{{ entity[3] }}" required><br>
         <label for="is_student">Is Student:</label>
-        <input type="checkbox" id="is_student" name="is_student" {% if entity.is_student %}checked{% endif %}><br>
+        <input type="checkbox" id="is_student" name="is_student" {% if entity[4] %}checked{% endif %}><br>
         <input type="submit" value="Update">
     </form>
 </body>
