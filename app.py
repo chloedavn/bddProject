@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 app = Flask(__name__)
-app.config['SQALCHEMY_DATABASE_URI']='mysql://vg125hklo4ygb016:l3ea8dk6va8igqvw@dt3bgg3gu6nqye5f.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/xh7fmg3pmh4arzdc'
+
 db = psycopg2.connect(
     database="pccbdd",
     user="postgres",
