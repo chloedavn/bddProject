@@ -11,7 +11,6 @@ db = psycopg2.connect(
     port="5432"
 )
 
-
 @app.route('/')
 def index():
     cursor = db.cursor()
