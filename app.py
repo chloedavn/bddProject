@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 
 app = Flask(__name__)
-
+'''
 db = psycopg2.connect(
     database="pccbdd",
     user="postgres",
@@ -18,9 +18,9 @@ db = psycopg2.connect(
     database="pccdb",
     user="pccdb_user",
     password="eAqQPPaG2VSwYunJ7wxpTFwh2eET6fl4",
-    host="dpg-ckr4aqm2eoec73cveua0-a.frankfurt-postgres.render.comm",
+    host="dpg-ckr4aqm2eoec73cveua0-a.frankfurt-postgres.render.com",
     port="5432"
-)'''
+)
 
 @app.route('/')
 def index():
