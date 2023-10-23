@@ -1,14 +1,24 @@
 # app.py
 from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 import psycopg2
-app = Flask(__name__)
+import os
 
+app = Flask(__name__)
+'''
 db = psycopg2.connect(
     database="pccbdd",
     user="postgres",
     password="root",
     host="localhost",
     port="5432"
+)'''
+#postgres://database_823a_user:ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2@dpg-ckp4nse2eoec739262mg-a.oregon-postgres.render.com/database_823a
+db = psycopg2.connect(
+    database="database_823a",
+    user="database_823a_user",
+    password="ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2",
+    host="dpg-ckp4nse2eoec739262mg-a.oregon-postgres.render.com"
 )
 
 @app.route('/')
