@@ -1,8 +1,6 @@
 # app.py
 from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
 import psycopg2
-import os
 
 app = Flask(__name__)
 '''
