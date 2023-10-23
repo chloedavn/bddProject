@@ -3,21 +3,24 @@ from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 
 app = Flask(__name__)
-'''
+
 db = psycopg2.connect(
     database="pccbdd",
     user="postgres",
     password="root",
     host="localhost",
     port="5432"
-)'''
-#postgres://database_823a_user:ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2@dpg-ckp4nse2eoec739262mg-a.oregon-postgres.render.com/database_823a
-db = psycopg2.connect(
-    database="database_823a",
-    user="database_823a_user",
-    password="ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2",
-    host="dpg-ckp4nse2eoec739262mg-a.oregon-postgres.render.com"
 )
+'''
+#postgres://database_823a_user:ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2@dpg-ckp4nse2eoec739262mg-a.oregon-postgres.render.com/database_823a
+#postgres://database_823a_user:ujd8HcDY1Qbg80u91CFOOUZMO3JwsWg2@dpg-ckp4nse2eoec739262mg-a/database_823a
+db = psycopg2.connect(
+    database="pccdb",
+    user="pccdb_user",
+    password="eAqQPPaG2VSwYunJ7wxpTFwh2eET6fl4",
+    host="dpg-ckr4aqm2eoec73cveua0-a.frankfurt-postgres.render.comm",
+    port="5432"
+)'''
 
 @app.route('/')
 def index():
